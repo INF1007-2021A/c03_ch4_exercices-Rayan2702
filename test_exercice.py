@@ -56,7 +56,7 @@ class TestExercice(unittest.TestCase):
             ("aaaa", "x")
         ]
 
-        output = [exercice.get_nb_char(v[0], v[1]) for v in values]
+        output = [exercice.get_nb_char(v) for v in values]
         answer = [v[0].count(v[1]) for v in values]
 
         self.assertListEqual(
@@ -89,3 +89,5 @@ if __name__ == '__main__':
         loader = unittest.TestLoader()
         suite = loader.loadTestsFromModule(sys.modules[__name__])
         unittest.TextTestRunner(f, verbosity=2).run(suite)
+
+#'oui'
